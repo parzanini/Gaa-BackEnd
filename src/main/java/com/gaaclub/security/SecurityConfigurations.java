@@ -48,6 +48,7 @@ public class SecurityConfigurations{
                         .requestMatchers(HttpMethod.DELETE,"/api/deletematch/{id}").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE,"/api/deletemember/{id}").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.GET,"/api/events/{id}/matches").hasAnyRole("USER","ADMIN")
+                        .requestMatchers(HttpMethod.GET,"/api/keepServerRunning").permitAll()
                         .anyRequest().authenticated())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
