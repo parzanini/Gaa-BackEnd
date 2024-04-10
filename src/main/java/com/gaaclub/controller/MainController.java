@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:3000",allowedHeaders = "*")
+@CrossOrigin(origins = "https://gaa-frontend.onrender.com",allowedHeaders = "*")
 public class MainController {
 
     private final EventsService eventsService;
