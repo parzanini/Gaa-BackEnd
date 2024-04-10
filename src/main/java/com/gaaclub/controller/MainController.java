@@ -131,4 +131,12 @@ public class MainController {
     public void deleteMember(@PathVariable(name = "id") String member_id) {
         membersService.deleteMember(member_id);
     }
+
+    //------------------Keep Server Running------------------
+    @GetMapping("/keepServerRunning")
+    public String keepServerRunning() {
+        return "OK TA RODANDO";
+    }
+
 }
+
