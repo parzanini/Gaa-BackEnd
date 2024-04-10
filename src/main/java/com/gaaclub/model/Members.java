@@ -24,7 +24,6 @@ public class Members implements UserDetails {
     private String name;
     private String surname;
     @Id
-    @Indexed(unique = true)
     private String email;
     private String password;
     private String eircode;
